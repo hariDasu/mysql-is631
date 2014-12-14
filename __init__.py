@@ -11,7 +11,7 @@ app=createApp();
 
 @app.route("/")
 def test():
-    return render_template('test.html')
+    return render_template('mysqlZips.html')
 
 @app.route("/query1")
 def query1():
@@ -23,6 +23,49 @@ def query1():
 @app.route("/query2")
 def query2():
     results = backend.query2();
+    print results
+    return results
+
+
+@app.route("/query3")
+def query3():
+    results = backend.query3();
+    print results
+    return results
+
+@app.route("/query4")
+def query4():
+    results = backend.query4();
+    print results
+    return results
+
+@app.route("/mysqlEmps")
+def emps():
+    return render_template('mysqlEmps.html')
+
+@app.route("/empQuery1")
+def empQuery1():
+    results=backend.empQuery1()
+    print results
+    return results
+
+@app.route("/empQuery2")
+def empQuery2():
+    results=backend.empQuery2()
+    print results
+    return results
+
+
+@app.route("/empQuery3")
+def empQuery3():
+    results=backend.empQuery3()
+    print results
+    return results
+
+
+@app.route("/empQuery4")
+def empQuery4():
+    results=backend.empQuery4()
     print results
     return results
 
